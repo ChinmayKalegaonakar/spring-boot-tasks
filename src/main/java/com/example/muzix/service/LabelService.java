@@ -4,9 +4,11 @@ import com.example.muzix.exceptions.NotFoundException;
 import com.example.muzix.model.Label;
 import com.example.muzix.repository.LabelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class LabelService {
   @Autowired
   private LabelRepository labelRepository;
@@ -33,4 +35,10 @@ public class LabelService {
   public void deleteLabel(int id){
     labelRepository.deleteById(id);
   }
+
+  public Label getLabelOfTrack(int trackId){
+     int labelId = labelRepository.getLabelOfTrack(trackId);
+     return getLabelById(labelId);
+  }
+
 }

@@ -37,5 +37,7 @@ public class CommentService {
     commentRepository.deleteById(id);
   }
 
-
+  public List<Comment> getCommentOfTrack(int trackId){
+    return commentRepository.getCommentOfTrack(trackId);
+  }
 }

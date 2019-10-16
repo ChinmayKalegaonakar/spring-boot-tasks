@@ -55,6 +55,9 @@ public class Comment {
     this.likes = likes;
   }
 
+  public Comment() {
+  }
+
   public Comment(int trackId, String content, LocalDateTime timestamp, int likes) {
     this.trackId = trackId;
     this.content = content;

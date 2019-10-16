@@ -10,13 +10,14 @@ public class Artist {
   private int artistId;
   @GeneratedValue
   private String artistName;
+  private String artistDesc;
+
   public Artist() {
   }
 
   public Artist(int artistId, String artistName, Label artistLabel) {
     this.artistId = artistId;
     this.artistName = artistName;
-
   }
 
   public int getArtistId() {
@@ -35,4 +36,11 @@ public class Artist {
     this.artistName = artistName;
   }
 
+  public String getArtistDesc() {
+    return artistDesc;
+  }
+
+  public void setArtistDesc(String artistDesc) {
+    this.artistDesc = artistDesc;
+  }
 }

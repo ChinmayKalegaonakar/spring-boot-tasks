@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 public class TrackController {
+
   @Autowired
   private TrackService trackService;
 
@@ -17,10 +19,7 @@ public class TrackController {
   }
 
   @GetMapping("/")
-  public List<Track> getAllTrack(){
-    List<Track> tracks = trackService.getAllTracks();
-    return tracks;
-  }
+  public List<Track> getAllTrack(){ return trackService.getAllTracks(); }
 
   @GetMapping("/track/{id}")
   public Track getOne(@PathVariable int id){ return trackService.getTrackById(id); }

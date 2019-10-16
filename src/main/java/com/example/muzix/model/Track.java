@@ -3,10 +3,8 @@ package com.example.muzix.model;
 import lombok.Data;
 import org.hibernate.annotations.GeneratorType;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,6 +16,9 @@ public class Track {
   private String trackAlbum;
   private float trackLength;
   private int trackListens;
+
+  @Transient
+  private List<Artist> artists;
 
   public Track() {
   }
@@ -60,11 +61,17 @@ public class Track {
     this.trackLength = trackLength;
   }
 
-  public int getTrackListenes() {return trackListens; }
+  public int getTrackListens() {return trackListens; }
 
-  public void setTrackListenes(int trackListenes) {
+  public void setTrackListens(int trackListenes) {
     this.trackListens = trackListenes;
   }
 
+  public List<Artist> getArtists() {
+    return artists;
+  }
 
+  public void setArtists(List<Artist> artists) {
+    this.artists = artists;
+  }
 }
