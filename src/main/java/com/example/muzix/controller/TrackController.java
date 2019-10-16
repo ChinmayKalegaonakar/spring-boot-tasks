@@ -3,6 +3,7 @@ package com.example.muzix.controller;
 import com.example.muzix.model.Track;
 import com.example.muzix.service.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

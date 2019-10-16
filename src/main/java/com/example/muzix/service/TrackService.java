@@ -5,13 +5,15 @@ import com.example.muzix.exceptions.TrackExistsException;
 import com.example.muzix.model.Track;
 import com.example.muzix.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TrackService {
+@Primary
+public class TrackService implements TrackServiceInterface {
 
   @Autowired
   private TrackRepository trackRepository;
@@ -52,6 +54,10 @@ public class TrackService {
 
   public List<Track> getTrackByAlbum(String trackAlbum){
     return trackRepository.findByTrackAlbum(trackAlbum);
+  }
+
+  public void getMessage(){
+    System.out.println("Ran from track service");
   }
 
 }
