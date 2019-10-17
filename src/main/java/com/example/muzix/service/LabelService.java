@@ -10,9 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 @Service
 public class LabelService {
-  @Autowired
+
   private LabelRepository labelRepository;
 
+  @Autowired
   public LabelService(LabelRepository labelRepository) {
     this.labelRepository = labelRepository;
   }

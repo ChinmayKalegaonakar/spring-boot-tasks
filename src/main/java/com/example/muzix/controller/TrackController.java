@@ -12,9 +12,9 @@ import java.util.List;
 @RestController
 public class TrackController {
 
-  @Autowired
-  private TrackService trackService;
 
+  private TrackService trackService;
+  @Autowired
   public TrackController(TrackService trackService) {
     this.trackService = trackService;
   }

@@ -11,7 +11,6 @@ import org.springframework.core.env.AbstractEnvironment;
 
 
 @Configuration
-@EnableAutoConfiguration
 public class AppConfig {
   private static final Logger log = LoggerFactory.getLogger(AppConfig.class);
 

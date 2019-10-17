@@ -11,9 +11,9 @@ import java.util.List;
 
 @Service
 public class ArtistService {
-  @Autowired
-  private ArtistRepository artistRepository;
 
+  private ArtistRepository artistRepository;
+  @Autowired
   public ArtistService(ArtistRepository artistRepository) {
     this.artistRepository = artistRepository;
   }

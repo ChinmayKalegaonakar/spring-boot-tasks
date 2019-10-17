@@ -15,9 +15,10 @@ import java.util.Optional;
 @Primary
 public class TrackService implements TrackServiceInterface {
 
-  @Autowired
+
   private TrackRepository trackRepository;
 
+  @Autowired
   public TrackService(TrackRepository trackRepository) {
     this.trackRepository = trackRepository;
   }

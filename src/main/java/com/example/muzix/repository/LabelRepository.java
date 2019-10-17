@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface LabelRepository extends JpaRepository<Label,Integer> {
   @Query(value = "SELECT LABEL_ID FROM SONGMAPPING WHERE TRACK_ID = :trackId",nativeQuery = true)
   int getLabelOfTrack(@Param("trackId") int trackId);

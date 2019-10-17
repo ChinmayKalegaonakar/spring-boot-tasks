@@ -10,9 +10,10 @@ import java.util.List;
 
 @Component("trackServiceImpl")
 public class TrackServiceImpl implements TrackServiceInterface{
-  @Autowired
+
   private TrackRepository trackRepository;
 
+  @Autowired
   public TrackServiceImpl(TrackRepository trackRepository) {
     this.trackRepository = trackRepository;
   }

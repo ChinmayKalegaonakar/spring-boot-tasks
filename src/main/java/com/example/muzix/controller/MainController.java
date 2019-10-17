@@ -17,12 +17,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/all")
 public class MainController {
-  @Autowired
+
   private TrackService trackService;
   private ArtistService artistService;
   private LabelService labelService;
   private CommentService commentService;
 
+  @Autowired
   public MainController(TrackService trackService, ArtistService artistService, LabelService labelService, CommentService commentService) {
     this.trackService = trackService;
     this.artistService = artistService;

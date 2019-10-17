@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface TrackRepository extends JpaRepository<Track,Integer> {
 
   @Query(value = "select * from TRACK where TRACK_NAME like %:trackName%",nativeQuery = true)
